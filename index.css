@@ -1,0 +1,151 @@
+/* --- 1. Basic Reset and Body Styling (Deep Dark Background) --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, clean font */
+    background-color: #0c0f1d; /* Very deep blue-black */
+    color: #f0f8ff; /* Off-white text for high contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* --- 2. Form Container Styling (Floating, Elevated Look) --- */
+.form-container {
+    background-color: #1a1e35; /* Dark blue-grey container */
+    padding: 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 500px; /* Slightly wider */
+    /* Subtle glow effect using a darker primary color */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 
+                0 0 15px rgba(45, 120, 255, 0.4); 
+    border: 1px solid #2e355c; /* Very subtle border */
+}
+
+/* Form Title */
+.form-container h1 {
+    text-align: center;
+    color: #87cefa; /* Soft sky blue for title */
+    margin-bottom: 35px;
+    font-size: 2.2em;
+    font-weight: 300; /* Lighter font weight for premium feel */
+    letter-spacing: 1px;
+}
+
+/* --- 3. Input and Select Field Styling --- */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #a0a6cc; /* Muted label color */
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group select {
+    width: 100%;
+    padding: 14px;
+    background-color: #2e355c; /* Medium-dark input background */
+    border: 1px solid #3c4470;
+    border-radius: 8px;
+    color: #f0f8ff;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #87cefa; /* Focus color */
+    box-shadow: 0 0 0 3px rgba(135, 206, 250, 0.2);
+    outline: none;
+    background-color: #353c61; /* Slightly lighter on focus */
+}
+
+/* Placeholder Text */
+.form-group input::placeholder {
+    color: #7d84a3;
+}
+
+/* Custom Text Separators */
+.form-container p {
+    color: #87cefa;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #2e355c;
+}
+
+/* --- 4. Payment Section & QR Code Positioning (CENTERED) --- */
+.payment-proof-section {
+    padding-top: 25px;
+    margin-top: 25px;
+    text-align: center; /* Center alignment for the QR code elements */
+}
+
+.qr-code-box {
+    background-color: #080a13; /* Pure black for the QR code area */
+    border: 2px solid #4a548c; /* Subtle light border */
+    border-radius: 8px;
+    width: 200px; 
+    height: 200px;
+    margin: 15px auto 25px auto; /* KEY: 'auto' centers the block horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(135, 206, 250, 0.1);
+}
+
+.qr-code {
+    width: 90%; 
+    height: 90%;
+    object-fit: contain;
+    opacity: 1; 
+}
+
+/* File Input Custom Styling */
+.form-group input[type="file"] {
+    display: none; /* Hide default input */
+}
+
+.file-note {
+    font-size: 0.9em;
+    color: #87cefa; /* Premium accent color */
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px dashed #3c4470;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #1f233b;
+    display: block;
+    text-align: center;
+}
+
+/* Register Button Styling (Deep Blue Gradient) */
+.register-button {
+    width: 100%;
+    padding: 16px;
+    /* Clean, professional blue gradient */
+    background: linear-gradient(90deg, #58a6ff, #2d78ff); 
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1.15em;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 40px;
+    box-shadow: 0 4px 15px rgba(45, 120, 255, 0.4);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.register-button:hover {
+    background: linear-gradient(90deg, #2d78ff, #58a6ff); 
+    transform: translateY(-2px);
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE-CAMP Registration</title>
+    <link rel="stylesheet" href="index.css"> 
+</head>
+<body>
+    <div class="form-container">
+        <h1>CODE-CAMP Registration</h1>
+        
+        <form 
+            action="https://script.google.com/macros/s/AKfycbz_0kihhY1wYhmLn9w9hd3qQkjDjKvOeEQAhOQr1J4htIFaVG4qr28Yz1qnB6JX3WtJ7A/exec" 
+            method="POST" 
+            enctype="multipart/form-data"
+            target="hidden_iframe" 
+            onsubmit="submissionSuccess();" 
+        >
+            
+            <div class="form-group">
+                <label for="teamName">Team Name</label>
+                <input type="text" id="teamName" name="Team Name" placeholder="Enter Team Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="teamSize">Team Size</label>
+                <select id="teamSize" name="Team Size" required>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4" selected>4</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="contactNo">Contact No (10 digits)</label>
+                <input type="tel" id="contactNo" name="Contact No" placeholder="+91XXXXXXXXXX" pattern="[0-9]{10}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" placeholder="example@gmail.com" required>
+            </div>
+
+            <p style="margin-top: 30px; font-weight: bold; color: #00ffc8;">Member Details</p>
+
+            <div class="form-group member-field">
+                <label for="member1">Member 1 Name (Leader)</label>
+                <input type="text" id="member1" name="Member 1 Name" placeholder="Enter Member 1 Name" required>
+            </div>
+
+            <div class="form-group member-field">
+                <label for="member2">Member 2 Name</label>
+                <input type="text" id="member2" name="Member 2 Name" placeholder="Enter Member 2 Name" required>
+            </div>
+
+            <div class="form-group member-field" id="member3-group">
+                <label for="member3">Member 3 Name</label>
+                <input type="text" id="member3" name="Member 3 Name" placeholder="Enter Member 3 Name">
+            </div>
+
+            <div class="form-group member-field" id="member4-group">
+                <label for="member4">Member 4 Name</label>
+                <input type="text" id="member4" name="Member 4 Name" placeholder="Enter Member 4 Name">
+            </div>
+
+            <div class="form-group">
+                <label for="year">Year</label>
+                <select id="year" name="Year" required>
+                    <option value="" disabled selected>Select Year</option>
+                    <option value="First Year">First Year</option>
+                    <option value="Second Year">Second Year</option>
+                    <option value="Third Year">Third Year</option>
+                    <option value="Final Year">Final Year</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="branch">Branch</label>
+                <select id="branch" name="Branch" required>
+                    <option value="" disabled selected>Select Branch</option>
+                    <option value="CSE">CSE (Computer Science & Engineering)</option>
+                    <option value="IT">IT (Information Technology)</option>
+                    <option value="ECE">ECE (Electronics & Communication)</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Civil">Civil</option>
+                </select>
+            </div>
+            
+            <p style="margin-top: 40px; font-weight: bold; color: #b400ff;">Payment (Fees: 200/- per team)</p>
+
+            <div class="form-group payment-proof-section">
+                <label>Scan & Pay via UPI</label>
+                <div class="qr-code-box">
+                    <img src="[LINK_TO_YOUR_UPI_QR_CODE_IMAGE]" alt="UPI QR Code" class="qr-code">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="paymentProof">Upload Payment Proof (Screenshot/PDF)</label>
+                <input type="file" id="paymentProof" name="paymentProof" accept="image/*, application/pdf" required>
+                <p class="file-note" id="fileNameDisplay">No file chosen</p>
+            </div>
+
+            <button type="submit" class="register-button">Register Team</button>
+            
+        </form>
+        </div>
+
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+<script src="index.js"></script>
+</body>
+</html>
